@@ -4,8 +4,8 @@ Runtime implementation repository for the Core product-family design system.
 
 ## Ownership boundary
 
-- Product semantics, UX rules, tokens meaning, governance, and maturity live in `CoreLinkPlatform/product-planning/design/system`.
-- This repository owns runtime packages, Storybook, tests, and releases.
+- Product semantics, UX rules, token meaning, governance, and maturity live in `CoreLinkPlatform/product-planning/design/system`.
+- This repository owns runtime packages, Storybook, tests, CI and releases.
 
 ## First vertical slice
 
@@ -23,3 +23,7 @@ Initial consumer: `CoreLinkPlatform/Control`.
 - patterns package
 - full AppShell extraction
 - premature DataTable abstraction
+
+## Status
+
+Alpha foundation. Runtime implementation follows the canonical specification from product-planning.
