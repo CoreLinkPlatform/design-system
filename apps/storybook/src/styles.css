@@ -1,0 +1,13 @@
+:root {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+[data-theme='light'] {
+  background: #ffffff;
+  color: #111827;
+}
+
+[data-theme='dark'] {
+  background: #111827;
+  color: #f9fafb;
+}
