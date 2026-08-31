@@ -2,6 +2,9 @@
   "name": "@coreplatform/icons",
   "version": "0.1.0-alpha.0",
   "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
   "scripts": {
     "build": "echo 'icons build pending'"
   }
