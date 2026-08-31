@@ -1,3 +1,12 @@
+// Core Platform icon system
+// Source: Phosphor Icons
+// Preferred style: Duotone
+
+export const iconSystem = {
+  library: 'Phosphor Icons',
+  defaultWeight: 'duotone',
+} as const;
+
 export type CoreIconName = 'status' | 'device' | 'signal';
 
 export interface CoreIconProps {
@@ -6,5 +15,9 @@ export interface CoreIconProps {
 }
 
 export function CoreIcon({ name, size = 16 }: CoreIconProps) {
-  return { name, size };
+  return {
+    name,
+    size,
+    weight: iconSystem.defaultWeight,
+  };
 }
