@@ -2,10 +2,9 @@
   "name": "@coreplatform/ui",
   "version": "0.1.0-alpha.0",
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "scripts": {
-    "build": "echo 'ui build pending'"
+    "build": "echo 'ui build pending'",
+    "lint": "echo 'ui lint pending'",
+    "test": "echo 'ui test pending'"
   }
 }
