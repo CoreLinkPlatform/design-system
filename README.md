@@ -5,7 +5,7 @@ Runtime implementation repository for the Core product-family design system.
 ## Ownership boundary
 
 - Product semantics, UX rules, token meaning, governance, and maturity live in `CoreLinkPlatform/product-planning/design/system`.
-- This repository owns runtime packages, Storybook, tests, CI and releases.
+- This repository owns runtime packages, Storybook, tests, and CI.
 
 ## First vertical slice
 
@@ -23,6 +23,25 @@ Initial consumer: `CoreLinkPlatform/Control`.
 - patterns package
 - full AppShell extraction
 - premature DataTable abstraction
+
+## Development
+
+Requirements:
+
+- Node.js >= 22
+- pnpm 10
+
+Install:
+
+```bash
+pnpm install
+```
+
+Build:
+
+```bash
+pnpm build
+```
 
 ## Status
 
