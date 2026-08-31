@@ -2,10 +2,9 @@
   "name": "@coreplatform/icons",
   "version": "0.1.0-alpha.0",
   "type": "module",
-  "exports": {
-    ".": "./src/index.ts"
-  },
   "scripts": {
-    "build": "echo 'icons build pending'"
+    "build": "echo 'icons build pending'",
+    "lint": "echo 'icons lint pending'",
+    "test": "echo 'icons test pending'"
   }
 }
