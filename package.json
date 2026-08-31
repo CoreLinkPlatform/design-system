@@ -2,7 +2,7 @@
   "name": "@coreplatform/design-system",
   "private": true,
   "version": "0.1.0-alpha.0",
-  "packageManager": "pnpm@10",
+  "packageManager": "pnpm@10.15.0",
   "engines": {
     "node": ">=22"
   },
@@ -10,5 +10,8 @@
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "test": "pnpm -r test"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.29.7"
   }
 }
