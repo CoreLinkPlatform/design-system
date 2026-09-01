@@ -1,10 +1,16 @@
 export const coreTokens = {
-  color: {
-    brand: { primary: '#168BFF' },
-    surface: { default: '#FFFFFF', raised: '#F8FAFC' },
-    text: { primary: '#0F172A', secondary: '#475569' }
+  colors: {
+    primary: '#0066FF',
+    secondary: '#00C2FF',
   },
-  radius: { sm: '4px', md: '8px', lg: '12px' }
+  radius: {
+    sm: '8px',
+    md: '12px',
+    lg: '16px',
+  },
+  spacing: {
+    sm: '8px',
+    md: '16px',
+    lg: '24px',
+  },
 } as const;
-
-export type CoreTokens = typeof coreTokens;
