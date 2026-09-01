@@ -1,13 +1,9 @@
 {
   "files": [],
-  "references": [
-    { "path": "packages/tokens" },
-    { "path": "packages/icons" },
-    { "path": "packages/ui" }
-  ],
   "compilerOptions": {
     "strict": true,
     "skipLibCheck": true,
     "noEmit": true
-  }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx"]
 }
