@@ -1,0 +1,12 @@
+:root {
+  font-family: "Noto Sans Arabic", "Noto Sans", system-ui, sans-serif;
+  direction: rtl;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.core-display {
+  font-family: "Handjet", sans-serif;
+}
