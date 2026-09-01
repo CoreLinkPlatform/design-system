@@ -1,0 +1,26 @@
+# Deployment
+
+## Target
+
+The official documentation site is:
+
+`https://design.coreplatform.ir`
+
+## Build
+
+```bash
+pnpm install
+pnpm storybook:build
+```
+
+The generated static site is located in `storybook-static`.
+
+## Cloudflare Pages
+
+Connect this repository to Cloudflare Pages:
+
+- Production branch: `main`
+- Build command: `pnpm install && pnpm storybook:build`
+- Output directory: `storybook-static`
+
+Every push to main should trigger a new documentation deployment.
