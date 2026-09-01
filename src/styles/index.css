@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Handjet:wght@400;500;600&display=swap');
+
+:root {
+  --core-font-family: 'Noto Sans', 'Noto Sans Arabic', system-ui, sans-serif;
+  --core-display-font-family: 'Handjet', 'Noto Sans', sans-serif;
+}
+
+.core-root {
+  font-family: var(--core-font-family);
+  direction: ltr;
+}
+
+.core-rtl {
+  direction: rtl;
+}
