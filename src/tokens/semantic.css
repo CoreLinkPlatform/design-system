@@ -1,0 +1,15 @@
+:root {
+  --core-color-action-primary: #0066FF;
+  --core-color-surface-default: #F9FAFB;
+  --core-color-text-primary: #111827;
+
+  --core-radius-sm: 8px;
+  --core-radius-md: 12px;
+  --core-radius-lg: 16px;
+
+  --core-space-1: 4px;
+  --core-space-2: 8px;
+  --core-space-3: 12px;
+  --core-space-4: 16px;
+  --core-space-6: 24px;
+}
