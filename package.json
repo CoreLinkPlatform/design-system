@@ -19,12 +19,11 @@
   "peerDependencies": {
     "react": ">=18"
   },
-  "dependencies": {
-    "@phosphor-icons/react": "^2.1.7"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@storybook/addon-essentials": "^8.6.18",
+    "@storybook/addon-themes": "^8.6.18",
     "@storybook/react": "^8.6.18",
     "@storybook/react-vite": "^8.6.18",
     "@types/react": "^19.2.18",
