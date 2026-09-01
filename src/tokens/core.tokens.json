@@ -1,35 +1,45 @@
 {
-  "$schema": "https://json.schemastore.org/json",
-  "core": {
-    "color": {
-      "primary": {
-        "500": "#0066FF"
+  "color": {
+    "primitive": {
+      "blue": {
+        "500": "#0066FF",
+        "600": "#0052CC"
       },
-      "accent": {
+      "cyan": {
         "500": "#00C2FF"
       },
-      "surface": {
-        "default": "#FFFFFF"
-      },
-      "text": {
-        "default": "#111827"
+      "gray": {
+        "50": "#F9FAFB",
+        "900": "#111827"
       }
     },
-    "radius": {
-      "sm": "8px",
-      "md": "12px",
-      "lg": "16px"
-    },
-    "spacing": {
-      "1": "4px",
-      "2": "8px",
-      "3": "12px",
-      "4": "16px",
-      "6": "24px",
-      "8": "32px"
-    },
-    "typography": {
-      "fontFamily": "Noto Sans Arabic"
+    "semantic": {
+      "action": {
+        "primary": "{color.primitive.blue.500}"
+      },
+      "surface": {
+        "default": "{color.primitive.gray.50}"
+      },
+      "text": {
+        "primary": "{color.primitive.gray.900}"
+      }
+    }
+  },
+  "radius": {
+    "sm": "8px",
+    "md": "12px",
+    "lg": "16px"
+  },
+  "spacing": {
+    "1": "4px",
+    "2": "8px",
+    "3": "12px",
+    "4": "16px",
+    "6": "24px"
+  },
+  "typography": {
+    "fontFamily": {
+      "base": "Noto Sans Arabic"
     }
   }
 }
