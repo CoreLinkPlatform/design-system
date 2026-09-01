@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json.schemastore.org/json",
+  "core": {
+    "color": {
+      "primary": {
+        "500": "#0066FF"
+      },
+      "accent": {
+        "500": "#00C2FF"
+      },
+      "surface": {
+        "default": "#FFFFFF"
+      },
+      "text": {
+        "default": "#111827"
+      }
+    },
+    "radius": {
+      "sm": "8px",
+      "md": "12px",
+      "lg": "16px"
+    },
+    "spacing": {
+      "1": "4px",
+      "2": "8px",
+      "3": "12px",
+      "4": "16px",
+      "6": "24px",
+      "8": "32px"
+    },
+    "typography": {
+      "fontFamily": "Noto Sans Arabic"
+    }
+  }
+}
