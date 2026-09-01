@@ -1,5 +1,5 @@
-import React, { createContext, useContext } from 'react';
-import { themes, ThemeName } from './index';
+import { createContext, useContext, type ReactNode } from 'react';
+import { themes, type ThemeName } from './index';
 
 const ThemeContext = createContext<ThemeName>('light');
 
@@ -8,7 +8,7 @@ export function ThemeProvider({
   children,
 }: {
   mode?: ThemeName;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <ThemeContext.Provider value={mode}>
