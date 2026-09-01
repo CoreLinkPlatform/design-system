@@ -1,16 +1,20 @@
-# Core Colors
+# Core Color Foundation
 
-## Core Palette
+## Palette
 
-Colors are defined through tokens and must not be hardcoded inside components.
+Core uses semantic colors instead of direct values inside components.
 
-## Semantic Usage
+## Primary
 
-- Primary action
-- Secondary action
-- Status
-- Feedback
-- Background
-- Surface
+- Core Blue 500: `#0066FF`
+- Core Cyan 500: `#00C2FF`
 
-Future versions will expose generated token tables.
+## Semantic usage
+
+Components should consume:
+
+- action.primary
+- surface.default
+- text.primary
+
+Never hardcode product colors in components.
