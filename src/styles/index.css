@@ -1,15 +1,32 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&family=Handjet:wght@400;500;600&display=swap');
-
-:root {
-  --core-font-family: 'Noto Sans', 'Noto Sans Arabic', system-ui, sans-serif;
-  --core-display-font-family: 'Handjet', 'Noto Sans', sans-serif;
-}
+@import '../fonts/index.css';
+@import '../tokens/semantic.css';
+@import './components.css';
 
 .core-root {
+  box-sizing: border-box;
+  color: var(--core-color-text-primary);
+  background: var(--core-color-surface-page);
   font-family: var(--core-font-family);
+  color-scheme: light;
+}
+
+.core-root *,
+.core-root *::before,
+.core-root *::after {
+  box-sizing: border-box;
+}
+
+.core-root[dir='rtl'],
+.core-rtl {
+  direction: rtl;
+}
+
+.core-root[dir='ltr'],
+.core-ltr {
   direction: ltr;
 }
 
-.core-rtl {
-  direction: rtl;
+[data-theme='dark'] .core-root,
+.core-root[data-theme='dark'] {
+  color-scheme: dark;
 }
