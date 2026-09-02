@@ -31,7 +31,8 @@ export const coreTokens = {
         "secondary": "#475569",
         "muted": "#64748B",
         "disabled": "#94A3B8",
-        "onPrimary": "#07172F"
+        "onPrimary": "#07172F",
+        "onDanger": "#FFFFFF"
       },
       "border": {
         "default": "#E2E8F0",
@@ -80,7 +81,8 @@ export const coreTokens = {
         "secondary": "#CBD5E1",
         "muted": "#94A3B8",
         "disabled": "#64748B",
-        "onPrimary": "#07172F"
+        "onPrimary": "#07172F",
+        "onDanger": "#FFFFFF"
       },
       "border": {
         "default": "#2A3443",
