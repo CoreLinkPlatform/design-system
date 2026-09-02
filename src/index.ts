@@ -13,5 +13,6 @@ export * from './components/EmptyState';
 export * from './tokens';
 export * from './icons';
 export * from './themes';
+export * from './experimental';
 
 import './styles/index.css';
