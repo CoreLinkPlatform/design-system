@@ -1,0 +1,19 @@
+.core-docs { color: var(--core-color-text-primary); font-family: var(--core-font-family); max-inline-size: 1120px; margin-inline: auto; }
+.core-docs * { box-sizing: border-box; }
+.core-docs__hero { padding: clamp(32px, 7vw, 72px); border: 1px solid var(--core-color-border-default); border-radius: var(--core-radius-lg); background: linear-gradient(135deg, color-mix(in srgb, var(--core-color-brand-blue) 12%, var(--core-color-surface-default)), var(--core-color-surface-default) 58%, color-mix(in srgb, var(--core-color-brand-violet) 10%, var(--core-color-surface-default))); }
+.core-docs__eyebrow { color: var(--core-color-brand-blue); font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.core-docs__title { max-inline-size: 760px; margin-block: 12px; font-size: clamp(2rem, 5vw, 4rem); line-height: 1.05; }
+.core-docs__lede { max-inline-size: 720px; color: var(--core-color-text-secondary); font-size: 1.125rem; line-height: 1.8; }
+.core-docs__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--core-space-4); margin-block: var(--core-space-6); }
+.core-docs__card { padding: var(--core-space-5); border: 1px solid var(--core-color-border-default); border-radius: var(--core-radius-md); background: var(--core-color-surface-default); }
+.core-docs__card h3 { margin-block-start: 0; }
+.core-docs__meta { color: var(--core-color-text-muted); font-size: .875rem; }
+.core-docs__swatches { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: var(--core-space-3); }
+.core-docs__swatch { overflow: hidden; border: 1px solid var(--core-color-border-default); border-radius: var(--core-radius-md); background: var(--core-color-surface-default); }
+.core-docs__swatch-color { block-size: 72px; background: var(--swatch); }
+.core-docs__swatch-label { padding: var(--core-space-3); }
+.core-docs__scale { display: flex; flex-wrap: wrap; align-items: end; gap: var(--core-space-4); }
+.core-docs__space { inline-size: var(--size); block-size: var(--size); min-inline-size: 4px; min-block-size: 4px; background: var(--core-color-brand-blue); border-radius: var(--core-radius-sm); }
+.core-docs__demo { padding: var(--core-space-5); border: 1px solid var(--core-color-border-default); border-radius: var(--core-radius-md); background: var(--core-color-surface-subtle); color: var(--core-color-text-primary); }
+.core-docs__bidi { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: var(--core-space-4); }
+.core-docs code { overflow-wrap: anywhere; }

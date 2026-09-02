@@ -1,15 +1,23 @@
-# Core Spacing Foundation
+import { Meta } from '@storybook/blocks';
 
-## Scale
+<Meta title="Foundations/Spacing" />
 
-Core uses a consistent spacing scale across products.
+<div className="core-docs">
 
-| Token | Value |
-| --- | --- |
-| space-1 | 4px |
-| space-2 | 8px |
-| space-3 | 12px |
-| space-4 | 16px |
-| space-6 | 24px |
+# Spacing
 
-Components should use spacing tokens instead of arbitrary values.
+A 4px base scale keeps density predictable across products and writing directions.
+
+| Token | Value | Token | Value |
+| --- | ---: | --- | ---: |
+| space-1 | 4px | space-6 | 24px |
+| space-2 | 8px | space-8 | 32px |
+| space-3 | 12px | space-10 | 40px |
+| space-4 | 16px | space-12 | 48px |
+| space-5 | 20px | space-16 | 64px |
+
+<div className="core-docs__scale">{[4,8,12,16,20,24,32,40,48,64].map((size) => <div key={size}><div className="core-docs__space" style={{'--size':size}}/><small>{size}</small></div>)}</div>
+
+Use the smallest value that preserves hierarchy and touch usability. Prefer logical gap and padding properties; arbitrary values must not silently become shared conventions.
+
+</div>

@@ -2,33 +2,33 @@ import { Meta } from '@storybook/blocks';
 
 <Meta title="Introduction/Welcome" />
 
-# Core Platform Design System
+<div className="core-docs">
+  <header className="core-docs__hero">
+    <div className="core-docs__eyebrow">Core Platform · Runtime UI</div>
+    <h1 className="core-docs__title">One reliable interface language for industrial products.</h1>
+    <p className="core-docs__lede">Core Design System turns canonical product semantics into accessible React components, generated tokens and bilingual guidance for Core Console, Core Link and Core Signal.</p>
+    <p className="core-docs__meta">Runtime package: <code>@corelinkplatform/design-system</code> · v0.1.0-alpha.4</p>
+  </header>
 
-## Building consistent industrial interfaces
+  <div className="core-docs__grid">
+    <section className="core-docs__card"><h3>Foundations</h3><p>Color, type, spacing, shape, icons, direction and themes—rendered from the runtime contract.</p></section>
+    <section className="core-docs__card"><h3>Components</h3><p>Stable primitives and product-neutral compositions with documented states and semantics.</p></section>
+    <section className="core-docs__card"><h3>Evidence</h3><p>Every shared component begins with a consumer need and moves through explicit maturity gates.</p></section>
+  </div>
 
-Core Design System is the shared UI foundation for:
+## Start here
 
-- Core Console
-- Core Link
-- Core Signal
+1. Review **Foundations / Source and revision** before changing any semantic value.
+2. Use the theme toolbar and the Persian/English examples while reviewing components.
+3. Consume exported tokens and components; avoid hardcoded product styles.
+4. Propose new shared behavior with consumer evidence and accessibility criteria.
 
-## Principles
+## Product principles
 
-### Token driven
+- Token-driven implementation
+- Persian RTL and English LTR as equal runtime modes
+- Accessibility as a release condition
+- Industrial clarity over decorative complexity
+- Canonical decisions in Product Planning; implementation evidence in this repository
 
-All interfaces are built from shared design tokens.
-
-### RTL first
-
-Persian and Arabic interfaces are first-class citizens.
-
-### Accessible
-
-Components follow modern accessibility practices.
-
-## Resources
-
-- Components
-- Foundations
-- Guidelines
-- Figma
+</div>

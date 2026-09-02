@@ -1,20 +1,29 @@
-# Core Color Foundation
+import { Meta } from '@storybook/blocks';
 
-## Palette
+<Meta title="Foundations/Color" />
 
-Core uses semantic colors instead of direct values inside components.
+<div className="core-docs">
 
-## Primary
+# Color
 
-- Core Blue 500: `#0066FF`
-- Core Cyan 500: `#00C2FF`
+Brand anchors identify Core; semantic tokens determine how color behaves in interfaces.
 
-## Semantic usage
+<div className="core-docs__swatches">
+  <div className="core-docs__swatch" style={{'--swatch':'var(--core-color-brand-cyan)'}}><div className="core-docs__swatch-color" /><div className="core-docs__swatch-label"><strong>Core Cyan</strong><br/><code>#00C2FF</code></div></div>
+  <div className="core-docs__swatch" style={{'--swatch':'var(--core-color-brand-blue)'}}><div className="core-docs__swatch-color" /><div className="core-docs__swatch-label"><strong>Core Blue</strong><br/><code>#168BFF</code></div></div>
+  <div className="core-docs__swatch" style={{'--swatch':'var(--core-color-brand-violet)'}}><div className="core-docs__swatch-color" /><div className="core-docs__swatch-label"><strong>Core Violet</strong><br/><code>#7B5CFF</code></div></div>
+</div>
 
-Components should consume:
+## Semantic layers
 
-- action.primary
-- surface.default
-- text.primary
+| Layer | Examples | Rule |
+| --- | --- | --- |
+| Surface | page, default, subtle, raised | Establish depth and grouping |
+| Text | primary, secondary, muted, disabled | Express hierarchy, not decoration |
+| Border | default, strong | Separate without competing with content |
+| Action | primary, danger | Reserve for interactive intent |
+| Status | success, warning, danger, info, offline, degraded, unknown | Keep operational meaning stable |
 
-Never hardcode product colors in components.
+Light and dark values are exported by the same token names. Primary action text intentionally uses `text.onPrimary` rather than assumed white, preserving contrast on Core Blue.
+
+</div>

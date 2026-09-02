@@ -1,0 +1,24 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundations/Source and revision" />
+
+<div className="core-docs">
+
+# Source and revision
+
+This portal documents the runtime implementation. It does not redefine canonical product decisions.
+
+| Evidence | Value |
+| --- | --- |
+| Canonical repository | `CoreLinkPlatform/product-planning` |
+| Canonical token path | `design/tokens.json` |
+| Accepted source revision | `069baefa4616b6b590ecde55fa09e99db124a148` |
+| Token schema version | `1.1` |
+| Runtime package | `@corelinkplatform/design-system` |
+| Package version | `0.1.0-alpha.4` |
+| Runtime source | `src/tokens/source.json` |
+| Generated outputs | `src/tokens/semantic.css`, `src/tokens/generated.ts` |
+
+Run `pnpm tokens:check` to prove generated artifacts match the committed source. Changes to meaning belong in Product Planning; changes to implementation, tests and consumer evidence belong here.
+
+</div>

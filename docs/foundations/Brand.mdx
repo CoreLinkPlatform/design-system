@@ -1,16 +1,25 @@
-# Core Brand Foundation
+import { Meta } from '@storybook/blocks';
 
-## Identity
+<Meta title="Foundations/Brand" />
 
-Core Platform uses a consistent visual language across Core Console, Core Link and Core Signal.
+<div className="core-docs">
 
-## Principles
+# Brand foundation
 
-- Industrial clarity
-- Data-first interfaces
-- Consistent semantics
-- RTL-first experience
+Core is an industrial, data-first product family. The visual language should feel precise, calm and operational across Core Console, Core Link and Core Signal.
 
-## Usage
+<div className="core-docs__grid">
+  <section className="core-docs__card"><h3>Clarity</h3><p>Hierarchy and status must be readable before visual flourish.</p></section>
+  <section className="core-docs__card"><h3>Continuity</h3><p>Shared semantics remain stable across products, languages and themes.</p></section>
+  <section className="core-docs__card"><h3>Evidence</h3><p>Shared patterns graduate only after real consumer needs are demonstrated.</p></section>
+</div>
 
-All products must consume shared tokens and components instead of custom styling.
+## Runtime expression
+
+Core Cyan, Blue and Violet are brand anchors—not permission to hardcode color. Product UI consumes semantic action, surface, text, border and status tokens. Handjet is a sparse display accent; it is not body copy. RTL is a first-class mode rather than a post-build mirror.
+
+## Ownership boundary
+
+Canonical meaning is owned by `CoreLinkPlatform/product-planning/design`. This package implements, tests and documents the accepted contract.
+
+</div>
