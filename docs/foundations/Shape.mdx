@@ -1,0 +1,27 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="Foundations/Shape and controls" />
+
+<div className="core-docs">
+
+# Shape and controls
+
+Shape communicates hierarchy without becoming decoration. Runtime values come from the generated semantic token contract.
+
+<div className="core-docs__grid">
+  <div className="core-docs__card" style={{borderRadius:'var(--core-radius-sm)'}}><strong>Small · 4px</strong><p>Compact internal details.</p></div>
+  <div className="core-docs__card" style={{borderRadius:'var(--core-radius-md)'}}><strong>Medium · 8px</strong><p>Default controls and surfaces.</p></div>
+  <div className="core-docs__card" style={{borderRadius:'var(--core-radius-lg)'}}><strong>Large · 12px</strong><p>Prominent containers.</p></div>
+</div>
+
+## Control heights
+
+| Size | Value | Intended use |
+| --- | ---: | --- |
+| Small | 36px | Dense secondary tools |
+| Medium | 44px | Default interaction target |
+| Large | 52px | Prominent or touch-heavy actions |
+
+Arbitrary radii and pill shapes are not part of the accepted runtime slice.
+
+</div>
