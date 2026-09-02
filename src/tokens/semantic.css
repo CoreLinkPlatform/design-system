@@ -24,6 +24,7 @@
   --core-color-text-muted: #64748B;
   --core-color-text-disabled: #94A3B8;
   --core-color-text-on-primary: #07172F;
+  --core-color-text-on-danger: #FFFFFF;
   --core-color-success: #166534;
   --core-color-success-surface: #F0FDF4;
   --core-color-warning: #92400E;
@@ -75,6 +76,7 @@
   --core-color-text-muted: #94A3B8;
   --core-color-text-disabled: #64748B;
   --core-color-text-on-primary: #07172F;
+  --core-color-text-on-danger: #FFFFFF;
   --core-color-success: #86EFAC;
   --core-color-success-surface: #052E16;
   --core-color-warning: #FCD34D;
