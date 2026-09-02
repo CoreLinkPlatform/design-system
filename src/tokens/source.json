@@ -16,7 +16,7 @@
     "brand": { "cyan": "#00C2FF", "blue": "#168BFF", "violet": "#7B5CFF" },
     "light": {
       "surface": { "page": "#F7F9FC", "default": "#FFFFFF", "subtle": "#F1F5F9", "raised": "#FFFFFF" },
-      "text": { "primary": "#111827", "secondary": "#475569", "muted": "#64748B", "disabled": "#94A3B8", "onPrimary": "#07172F" },
+      "text": { "primary": "#111827", "secondary": "#475569", "muted": "#64748B", "disabled": "#94A3B8", "onPrimary": "#07172F", "onDanger": "#FFFFFF" },
       "border": { "default": "#E2E8F0", "strong": "#CBD5E1" },
       "status": {
         "success": { "foreground": "#166534", "surface": "#F0FDF4" },
@@ -30,7 +30,7 @@
     },
     "dark": {
       "surface": { "page": "#0B0F14", "default": "#11161F", "subtle": "#171E2A", "raised": "#171E2A" },
-      "text": { "primary": "#F8FAFC", "secondary": "#CBD5E1", "muted": "#94A3B8", "disabled": "#64748B", "onPrimary": "#07172F" },
+      "text": { "primary": "#F8FAFC", "secondary": "#CBD5E1", "muted": "#94A3B8", "disabled": "#64748B", "onPrimary": "#07172F", "onDanger": "#FFFFFF" },
       "border": { "default": "#2A3443", "strong": "#3A4658" },
       "status": {
         "success": { "foreground": "#86EFAC", "surface": "#052E16" },
