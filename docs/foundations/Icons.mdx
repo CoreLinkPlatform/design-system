@@ -1,11 +1,28 @@
-# Core Icons
+import { Meta } from '@storybook/blocks';
 
-## Icon System
+<Meta title="Foundations/Icons" />
 
-Core uses Phosphor Icons with a preference for Duotone style where appropriate.
+<div className="core-docs">
+
+# Icons
+
+Core uses Phosphor Icons as a single visual vocabulary.
+
+| Weight | Use |
+| --- | --- |
+| Regular | Default interface and navigation icons |
+| Duotone | Selective emphasis, empty states and richer status illustration |
+| Fill | Active or selected state when shape change improves recognition |
 
 ## Rules
 
-- Use icons consistently
-- Do not introduce product-specific icon sets
-- Document semantic meaning
+- Use the runtime wrapper and semantic names; do not introduce a second icon family.
+- Decorative icons must be hidden from assistive technology.
+- Icon-only actions require an accessible name and the shared `IconButton` interaction states.
+- Directional icons may mirror in RTL; universal objects and brand marks do not.
+- Do not use color alone to communicate status.
+- Keep optical size aligned with the control, normally 16–24px.
+
+The current wrapper is intentionally narrow. New names require demonstrated consumer evidence rather than speculative catalog growth.
+
+</div>
