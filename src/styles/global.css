@@ -1,6 +1,14 @@
-:root {
-  font-family: "Noto Sans Arabic", "Noto Sans", system-ui, sans-serif;
-  direction: rtl;
+html,
+body {
+  margin: 0;
+  min-block-size: 100%;
+  background: var(--core-color-surface-page);
+  color: var(--core-color-text-primary);
+  font-family: var(--core-font-family);
+}
+
+body {
+  padding: var(--core-space-4);
 }
 
 * {
@@ -8,5 +16,5 @@
 }
 
 .core-display {
-  font-family: "Handjet", sans-serif;
+  font-family: var(--core-display-font-family);
 }
