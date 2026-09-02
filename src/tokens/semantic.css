@@ -89,7 +89,5 @@
   --core-color-degraded-surface: #431407;
   --core-color-unknown: #D1D5DB;
   --core-color-unknown-surface: #1F2937;
-  --core-color-action-danger: #FCA5A5;
-  --core-color-action-danger-hover: color-mix(in srgb, var(--core-color-action-danger) 84%, black);
   --core-shadow-raised: 0 12px 32px rgba(0, 0, 0, 0.32);
 }
