@@ -14,7 +14,9 @@
     "lint": "eslint .",
     "test": "vitest run --passWithNoTests",
     "storybook": "storybook dev -p 6006",
-    "storybook:build": "storybook build"
+    "storybook:build": "storybook build",
+    "tokens:generate": "node scripts/generate-tokens.mjs",
+    "tokens:check": "node scripts/generate-tokens.mjs --check"
   },
   "peerDependencies": {
     "react": ">=18"
