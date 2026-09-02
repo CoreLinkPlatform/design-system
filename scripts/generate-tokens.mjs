@@ -22,6 +22,7 @@ const themeLines = (theme) => {
     `  --core-color-text-muted: ${value.text.muted};`,
     `  --core-color-text-disabled: ${value.text.disabled};`,
     `  --core-color-text-on-primary: ${value.text.onPrimary};`,
+    `  --core-color-text-on-danger: ${value.text.onDanger};`,
   ];
   for (const [name, status] of Object.entries(value.status)) {
     lines.push(`  --core-color-${name}: ${status.foreground};`, `  --core-color-${name}-surface: ${status.surface};`);
