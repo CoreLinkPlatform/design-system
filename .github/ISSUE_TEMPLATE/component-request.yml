@@ -1,0 +1,97 @@
+name: Component request
+description: Propose a component or capability backed by consumer evidence
+title: "request: "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Requests enter the maturity process as Proposed. A visual reference alone is not evidence for a stable shared component.
+  - type: input
+    id: consumer
+    attributes:
+      label: Product and owner
+      placeholder: AgentReady — @owner
+    validations:
+      required: true
+  - type: textarea
+    id: job
+    attributes:
+      label: User job and problem
+      description: Describe the user outcome and why existing components cannot support it.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Consumer evidence
+      description: Link flows, screenshots, code, issues, analytics, or research.
+    validations:
+      required: true
+  - type: textarea
+    id: states
+    attributes:
+      label: Required states and variants
+      placeholder: idle, loading, partial, success, error, disabled, empty
+    validations:
+      required: true
+  - type: textarea
+    id: accessibility
+    attributes:
+      label: Accessibility contract
+      description: Keyboard, focus, screen-reader announcements, contrast, motion and target-size needs.
+    validations:
+      required: true
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Direction coverage
+      multiple: true
+      options:
+        - Persian / RTL
+        - English / LTR
+    validations:
+      required: true
+  - type: dropdown
+    id: themes
+    attributes:
+      label: Theme coverage
+      multiple: true
+      options:
+        - Light
+        - Dark
+        - High contrast
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Proposed ownership layer
+      options:
+        - Headless primitive
+        - Styled primitive
+        - Product composition
+        - Unsure
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: Proposed API and usage
+      render: tsx
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Existing Core primitives, product-local composition, or third-party options.
+  - type: checkboxes
+    id: readiness
+    attributes:
+      label: Request checks
+      options:
+        - label: I linked real consumer evidence.
+          required: true
+        - label: I described RTL/LTR, themes and accessibility needs.
+          required: true
+        - label: I understand that requests do not automatically become stable exports.
+          required: true
