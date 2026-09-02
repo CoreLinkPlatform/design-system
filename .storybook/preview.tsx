@@ -1,28 +1,25 @@
 import type { Preview } from '@storybook/react';
+import { withThemeByDataAttribute } from '@storybook/addon-themes';
+import '../src/styles/index.css';
+import '../src/experimental/styles.css';
 import '../src/styles/global.css';
 
 const preview: Preview = {
   parameters: {
-    controls: {
-      expanded: true,
-    },
+    controls: { expanded: true },
     options: {
       storySort: {
-        order: [
-          'Introduction',
-          'Foundations',
-          'Components',
-          'Patterns',
-        ],
+        order: ['Introduction', 'Foundations', 'Components', 'Experimental', 'Patterns'],
       },
     },
+    backgrounds: { disable: true },
   },
   decorators: [
-    (Story) => (
-      <div dir="rtl" lang="fa">
-        <Story />
-      </div>
-    ),
+    withThemeByDataAttribute({
+      themes: { light: 'light', dark: 'dark' },
+      defaultTheme: 'light',
+      attributeName: 'data-theme',
+    }),
   ],
 };
 
