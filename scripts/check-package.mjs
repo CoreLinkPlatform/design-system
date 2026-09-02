@@ -1,4 +1,5 @@
 import { access, readFile } from 'node:fs/promises';
+import { stdout } from 'node:process';
 
 const manifest = JSON.parse(await readFile('package.json', 'utf8'));
 const required = [
@@ -20,4 +21,4 @@ if (!manifest.version.endsWith('alpha.5')) {
   throw new Error(`Unexpected release version: ${manifest.version}`);
 }
 
-console.log(`Package contract verified for ${manifest.name}@${manifest.version}`);
+stdout.write(`Package contract verified for ${manifest.name}@${manifest.version}\n`);
