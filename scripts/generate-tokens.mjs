@@ -59,8 +59,6 @@ ${Object.entries(source.control).map(([k,v]) => `  --core-control-${k}: ${v};`).
 
 [data-theme='dark'] {
 ${themeLines('dark')}
-  --core-color-action-danger: ${source.color.dark.status.danger.foreground};
-  --core-color-action-danger-hover: color-mix(in srgb, var(--core-color-action-danger) 84%, black);
   --core-shadow-raised: ${source.shadow.raisedDark};
 }
 `;
