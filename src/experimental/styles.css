@@ -1,0 +1,52 @@
+:root {
+  --core-motion-instant: 0ms;
+  --core-motion-fast: 120ms;
+  --core-motion-normal: 240ms;
+  --core-motion-slow: 400ms;
+  --core-ease-enter: cubic-bezier(.2, .8, .2, 1);
+  --core-ease-exit: cubic-bezier(.4, 0, 1, 1);
+  --core-ease-move: cubic-bezier(.4, 0, .2, 1);
+  --core-ease-emphasize: cubic-bezier(.2, .9, .3, 1.2);
+  --core-ease-progress: linear;
+}
+
+.core-status-indicator { display: inline-flex; align-items: center; gap: var(--core-space-2); color: var(--core-color-text-secondary); font-weight: 600; }
+.core-status-indicator__dot { inline-size: 8px; block-size: 8px; border-radius: 50%; background: currentColor; flex: none; }
+.core-status-indicator--info { color: var(--core-color-info); }
+.core-status-indicator--success { color: var(--core-color-success); }
+.core-status-indicator--warning { color: var(--core-color-warning); }
+.core-status-indicator--danger { color: var(--core-color-danger); }
+.core-status-indicator[data-status='running'] .core-status-indicator__dot { animation: core-status-pulse 1.4s var(--core-ease-move) infinite; }
+
+.core-async-status { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: var(--core-space-2) var(--core-space-4); min-block-size: 64px; padding: var(--core-space-3) var(--core-space-4); border: 1px solid var(--core-color-border-default); border-radius: var(--core-radius-md); background: var(--core-color-surface-default); }
+.core-async-status__detail { grid-column: 1; min-inline-size: 0; color: var(--core-color-text-secondary); font-size: .875rem; }
+.core-async-status__action { grid-column: 2; grid-row: 1 / span 2; }
+
+.core-progress { display: grid; gap: var(--core-space-2); }
+.core-progress__header { display: flex; justify-content: space-between; gap: var(--core-space-4); color: var(--core-color-text-secondary); font-size: .875rem; font-weight: 600; }
+.core-progress__track { position: relative; overflow: hidden; block-size: 8px; border-radius: 999px; background: var(--core-color-surface-subtle); }
+.core-progress__bar { display: block; block-size: 100%; border-radius: inherit; background: var(--core-color-action-primary); transition: inline-size var(--core-motion-normal) var(--core-ease-move); }
+.core-progress__track[data-indeterminate='true'] .core-progress__bar { inline-size: 40%; animation: core-progress-indeterminate 1.2s var(--core-ease-progress) infinite; }
+
+.core-animated-number { display: inline-block; font-variant-numeric: tabular-nums; }
+.core-agent-orb { --core-orb-color: var(--core-color-text-secondary); display: inline-grid; place-items: center; inline-size: 32px; block-size: 32px; border-radius: 50%; background: color-mix(in srgb, var(--core-orb-color) 16%, transparent); }
+.core-agent-orb--sm { inline-size: 20px; block-size: 20px; }
+.core-agent-orb[data-status='running'] { --core-orb-color: var(--core-color-info); }
+.core-agent-orb[data-status='success'] { --core-orb-color: var(--core-color-success); }
+.core-agent-orb[data-status='partial'], .core-agent-orb[data-status='blocked'] { --core-orb-color: var(--core-color-warning); }
+.core-agent-orb[data-status='error'] { --core-orb-color: var(--core-color-danger); }
+.core-agent-orb__core { inline-size: 45%; block-size: 45%; border-radius: 50%; background: var(--core-orb-color); transform: scale(.9); }
+.core-agent-orb[data-status='running'] .core-agent-orb__core { animation: core-orb-breathe 1.4s var(--core-ease-emphasize) infinite alternate; }
+
+@keyframes core-status-pulse { 50% { opacity: .45; transform: scale(.8); } }
+@keyframes core-progress-indeterminate { from { transform: translateX(-110%); } to { transform: translateX(260%); } }
+@keyframes core-orb-breathe { to { transform: scale(1.25); } }
+
+[dir='rtl'] .core-progress__track[data-indeterminate='true'] .core-progress__bar { animation-direction: reverse; }
+[data-core-motion='reduce'] *, [data-core-motion='reduce'] *::before, [data-core-motion='reduce'] *::after { animation-duration: 1ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 1ms !important; }
+@media (prefers-reduced-motion: reduce) {
+  .core-status-indicator__dot, .core-progress__bar, .core-agent-orb__core { animation: none !important; transition: none !important; transform: none !important; }
+  .core-progress__track[data-indeterminate='true'] .core-progress__bar { inline-size: 100%; opacity: .55; }
+}
+
+@media (max-width: 480px) { .core-async-status { grid-template-columns: 1fr; } .core-async-status__action { grid-column: 1; grid-row: auto; } }
