@@ -1,26 +1,46 @@
 {
   "name": "@corelinkplatform/design-system",
+  "version": "0.1.0-alpha.5",
+  "description": "Runtime design system for the Core product family",
+  "type": "module",
   "private": false,
-  "version": "0.1.0-alpha.4",
-  "packageManager": "pnpm@10.15.0",
-  "engines": {
-    "node": ">=22"
+  "files": ["dist", "README.md", "CHANGELOG.md"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./tokens": {
+      "types": "./dist/tokens/index.d.ts",
+      "import": "./dist/tokens/index.js",
+      "default": "./dist/tokens/index.js"
+    },
+    "./styles.css": "./dist/styles/index.css",
+    "./experimental/styles.css": "./dist/experimental/styles.css"
   },
+  "sideEffects": ["**/*.css"],
+  "packageManager": "pnpm@10.15.0",
+  "engines": {"node": ">=22"},
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "registry": "https://npm.pkg.github.com",
+    "access": "restricted"
   },
   "scripts": {
-    "build": "tsc -b",
+    "clean": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\"",
+    "build": "pnpm clean && tsc -p tsconfig.build.json && node scripts/copy-package-assets.mjs",
     "lint": "eslint .",
     "test": "vitest run --passWithNoTests",
     "storybook": "storybook dev -p 6006",
     "storybook:build": "storybook build",
     "tokens:generate": "node scripts/generate-tokens.mjs",
-    "tokens:check": "node scripts/generate-tokens.mjs --check"
+    "tokens:check": "node scripts/generate-tokens.mjs --check",
+    "package:check": "pnpm build && node scripts/check-package.mjs && npm pack --dry-run"
   },
-  "peerDependencies": {
-    "react": ">=18"
-  },
+  "peerDependencies": {"react": ">=18"},
   "dependencies": {
     "@fontsource-variable/handjet": "^5.2.8",
     "@fontsource-variable/noto-sans": "^5.2.8",
