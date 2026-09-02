@@ -17,11 +17,11 @@
 }
 .core-button:focus-visible,
 .core-control:focus-visible {
-  outline: 3px solid color-mix(in srgb, var(--core-color-focus) 32%, transparent);
-  outline-offset: 2px;
+  outline: var(--core-focus-width) solid var(--core-color-focus);
+  outline-offset: var(--core-focus-offset);
 }
 .core-button:disabled { cursor: not-allowed; opacity: .55; }
-.core-button--primary { background: var(--core-color-action-primary); color: #fff; }
+.core-button--primary { background: var(--core-color-action-primary); color: var(--core-color-text-on-primary); }
 .core-button--primary:hover:not(:disabled) { background: var(--core-color-action-primary-hover); }
 .core-button--secondary { border-color: var(--core-color-border-default); background: var(--core-color-surface-default); }
 .core-button--secondary:hover:not(:disabled),
