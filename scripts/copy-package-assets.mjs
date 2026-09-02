@@ -1,4 +1,4 @@
-import { cp, mkdir, rm } from 'node:fs/promises';
+import { cp, mkdir } from 'node:fs/promises';
 
 const assetDirectories = ['fonts', 'styles'];
 const assetFiles = [
@@ -6,7 +6,6 @@ const assetFiles = [
   ['experimental/styles.css', 'experimental/styles.css'],
 ];
 
-await rm('dist', { recursive: true, force: true });
 await mkdir('dist', { recursive: true });
 
 for (const directory of assetDirectories) {
