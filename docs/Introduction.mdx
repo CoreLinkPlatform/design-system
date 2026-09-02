@@ -4,11 +4,7 @@ import { Meta } from '@storybook/blocks';
 
 # Core Platform Design System
 
-نسخه رسمی سیستم طراحی Core Platform.
-
-## هدف
-
-ایجاد رابط‌های یکپارچه، صنعتی و قابل توسعه برای محصولات Core.
+نسخهٔ اجرایی سیستم طراحی Core Platform برای ساخت رابط‌های یکپارچه، صنعتی، دسترس‌پذیر و قابل توسعه.
 
 ## اصول
 
@@ -16,15 +12,8 @@ import { Meta } from '@storybook/blocks';
 - Accessibility
 - RTL First
 - Token Driven Design
+- Consumer Evidence
 - Developer Friendly
-
-## Stack
-
-- React
-- TypeScript
-- Storybook
-- Phosphor Icons
-- Noto Sans Arabic
 
 ## ساختار
 
@@ -33,3 +22,21 @@ import { Meta } from '@storybook/blocks';
 - Components
 - Patterns
 - Guidelines
+
+## چرخهٔ کامپوننت
+
+هر درخواست از یک نیاز واقعی مصرف‌کننده شروع می‌شود:
+
+`Proposed → Experimental → Candidate → Stable → Deprecated`
+
+کامپوننت‌های محصولی تا زمانی که قرارداد مشترکشان با شواهد چند مصرف‌کننده ثابت نشده باشد، در همان محصول باقی می‌مانند.
+
+## Governance
+
+- [Maturity lifecycle and promotion gates](./COMPONENT_MATURITY.md)
+- [Component maturity matrix](./components/COMPONENT_MATRIX.md)
+- [Consumer evidence](./CONSUMER_EVIDENCE.md)
+- [Decision log](./COMPONENT_DECISIONS.md)
+- [Contribution guide](../CONTRIBUTING.md)
+
+معناها و تصمیم‌های canonical محصول در `product-planning/design/system` باقی می‌مانند؛ این ریپو implementation، تست و شواهد مصرف را نگهداری می‌کند.
