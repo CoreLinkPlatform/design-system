@@ -19,7 +19,11 @@
   "peerDependencies": {
     "react": ">=18"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@fontsource-variable/handjet": "^5.2.8",
+    "@fontsource-variable/noto-sans": "^5.2.8",
+    "@fontsource-variable/noto-sans-arabic": "^5.2.8"
+  },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "@storybook/addon-essentials": "^8.6.18",
