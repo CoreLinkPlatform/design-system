@@ -8,9 +8,20 @@ import { Meta } from '@storybook/blocks';
 
 Direction and theme are independent runtime dimensions. Components must remain usable in Persian RTL and English LTR, in light and dark themes.
 
+## Writing direction
+
 <div className="core-docs__bidi">
   <section className="core-docs__demo core-root" lang="fa" dir="rtl"><strong>فارسی · راست‌به‌چپ</strong><p>چیدمان با ویژگی‌های منطقی CSS پیاده‌سازی می‌شود.</p><button className="core-button core-button--primary core-button--md">ادامه</button></section>
   <section className="core-docs__demo core-root" lang="en" dir="ltr"><strong>English · left-to-right</strong><p>One contract supports both writing directions.</p><button className="core-button core-button--primary core-button--md">Continue</button></section>
+</div>
+
+## Theme parity
+
+These explicit runtime samples make theme comparison available on MDX documentation pages as well as through the toolbar on component stories.
+
+<div className="core-docs__bidi">
+  <section className="core-docs__demo core-root" data-theme="light" lang="en" dir="ltr"><strong>Light</strong><p>Page, surface, border and text resolve from light semantic tokens.</p><button className="core-button core-button--primary core-button--md">Primary action</button></section>
+  <section className="core-docs__demo core-root" data-theme="dark" lang="fa" dir="rtl"><strong>تیره</strong><p>سطح، مرز و متن از همان قرارداد معنایی در تم تیره می‌آیند.</p><button className="core-button core-button--primary core-button--md">اقدام اصلی</button></section>
 </div>
 
 ## Runtime contract
@@ -18,8 +29,9 @@ Direction and theme are independent runtime dimensions. Components must remain u
 - Set the content language with `lang="fa"` or `lang="en"`.
 - Set direction at the application boundary with `dir="rtl"` or `dir="ltr"`.
 - Use logical properties such as `margin-inline-start`; do not mirror with ad-hoc transforms.
-- Select themes with `data-theme="light"` or `data-theme="dark"`.
-- Use the Storybook toolbar to test both themes; never encode theme colors inside a component.
+- Select application themes with `data-theme="light"` or `data-theme="dark"`.
+- Use the Storybook toolbar for component stories and the side-by-side samples above for docs-only pages.
+- Never encode theme colors inside a component.
 - Focus remains a 2px Core Blue ring with a 2px offset in every mode.
 
 </div>
