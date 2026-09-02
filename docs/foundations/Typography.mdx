@@ -1,15 +1,25 @@
-# Core Typography
+import { Meta } from '@storybook/blocks';
 
-## Primary Font
+<Meta title="Foundations/Typography" />
 
-Noto Sans Arabic is the default text family.
+<div className="core-docs">
 
-## Display Font
+# Typography
 
-Handjet can be used selectively for special industrial and display contexts.
+The runtime selects type by content language while preserving one hierarchy.
 
-## Rules
+<div className="core-docs__grid">
+  <section className="core-docs__card core-root" lang="fa" dir="rtl"><h2>رابط فارسی خوانا</h2><p>متن فارسی با Noto Sans Arabic Variable نمایش داده می‌شود.</p><small>زبان و جهت باید صریح باشند.</small></section>
+  <section className="core-docs__card core-root" lang="en" dir="ltr"><h2>Readable English UI</h2><p>Latin text uses Noto Sans Variable.</p><small>Language and direction remain explicit.</small></section>
+</div>
 
-- Support Persian RTL layouts
-- Keep hierarchy consistent
-- Use semantic typography tokens
+| Role | Runtime family | Usage |
+| --- | --- | --- |
+| Persian/Arabic UI | Noto Sans Arabic Variable | Body, labels and headings for Arabic script |
+| Latin UI | Noto Sans Variable | Body, labels and headings for Latin script |
+| Code/data | JetBrains Mono | Identifiers, code and aligned technical values |
+| Display accent | Handjet Variable | Sparse branded or industrial display moments only |
+
+Do not force the Arabic family on English content or use Handjet for dense UI. Set `lang` and `dir` at a meaningful content boundary.
+
+</div>
