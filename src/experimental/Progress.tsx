@@ -1,5 +1,5 @@
 import type { HTMLAttributes, ReactNode } from 'react';
-export function normalizeProgress(value: number, min = 0, max = 100) { if (!Number.isFinite(value) || max <= min) return min; return Math.min(max, Math.max(min, value)); }
+export function normalizeProgress(value: number, min = 0, max = 100) { if (!isFinite(value) || max <= min) return min; return Math.min(max, Math.max(min, value)); }
 export interface ProgressProps extends Omit<HTMLAttributes<HTMLDivElement>, 'children'> { label: ReactNode; value?: number; min?: number; max?: number; valueLabel?: ReactNode; }
 export function Progress({ label, value, min = 0, max = 100, valueLabel, className = '', ...props }: ProgressProps) {
   const determinate = typeof value === 'number'; const normalized = determinate ? normalizeProgress(value, min, max) : undefined;
