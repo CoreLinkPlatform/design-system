@@ -3,13 +3,21 @@ import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import '../src/styles/index.css';
 import '../src/experimental/styles.css';
 import '../src/styles/global.css';
+import '../docs/portal.css';
 
 const preview: Preview = {
   parameters: {
     controls: { expanded: true },
     options: {
       storySort: {
-        order: ['Introduction', 'Foundations', 'Components', 'Experimental', 'Patterns'],
+        order: [
+          'Introduction', ['Welcome'],
+          'Foundations', ['Source and revision', 'Brand', 'Color', 'Typography', 'Icons', 'Spacing', 'Shape and controls', 'RTL, LTR and themes', 'Runtime tokens'],
+          'Components',
+          'Experimental',
+          'Patterns',
+          'Core',
+        ],
       },
     },
     backgrounds: { disable: true },
