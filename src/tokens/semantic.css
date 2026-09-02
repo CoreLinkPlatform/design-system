@@ -1,4 +1,8 @@
 :root {
+  --core-font-family-latin: 'Noto Sans Variable', system-ui, sans-serif;
+  --core-font-family-arabic: 'Noto Sans Arabic Variable', 'Noto Sans Variable', system-ui, sans-serif;
+  --core-font-family: var(--core-font-family-latin);
+  --core-display-font-family: 'Handjet Variable', var(--core-font-family-latin);
   --core-color-action-primary: #0066ff;
   --core-color-action-primary-hover: #0052cc;
   --core-color-action-danger: #b42318;
@@ -35,6 +39,13 @@
   --core-control-sm: 36px;
   --core-control-md: 44px;
   --core-control-lg: 52px;
+}
+
+.core-root[lang='fa'],
+.core-root[lang='ar'],
+[lang='fa'] .core-root,
+[lang='ar'] .core-root {
+  --core-font-family: var(--core-font-family-arabic);
 }
 
 [data-theme='dark'] {
