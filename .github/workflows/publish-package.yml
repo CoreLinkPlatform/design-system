@@ -14,6 +14,31 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
+      - name: Validate release channel metadata
+        env:
+          RELEASE_TAG: ${{ github.event.release.tag_name }}
+          RELEASE_PRERELEASE: ${{ github.event.release.prerelease }}
+        run: |
+          node <<'NODE'
+          const pkg = require('./package.json');
+          const expectedTag = `v${pkg.version}`;
+          const isPrereleaseVersion = pkg.version.includes('-');
+          const isGitHubPrerelease = process.env.RELEASE_PRERELEASE === 'true';
+
+          if (process.env.RELEASE_TAG !== expectedTag) {
+            console.error(`Release tag ${process.env.RELEASE_TAG} does not match package version ${expectedTag}.`);
+            process.exit(1);
+          }
+
+          if (isPrereleaseVersion !== isGitHubPrerelease) {
+            console.error(
+              `Release maturity mismatch: package ${pkg.version} requires prerelease=${isPrereleaseVersion}, ` +
+              `but GitHub Release has prerelease=${isGitHubPrerelease}.`
+            );
+            process.exit(1);
+          }
+          NODE
+
       - uses: pnpm/action-setup@v4
         with:
           version: 10.15.0
